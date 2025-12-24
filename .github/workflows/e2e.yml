@@ -38,7 +38,7 @@ jobs:
         run: make -f .github/workflows/e2e.mk -e example=${{ matrix.example }} -j 2 install
       - name: Run tests
         run: make -f .github/workflows/e2e.mk -e example=${{ matrix.example }} e2e
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: playwright-report
